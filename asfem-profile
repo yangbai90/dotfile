@@ -1,0 +1,18 @@
+export mpi=/home/by/Programs/mpich/3.4
+
+export PATH=$PATH:$mpi/bin
+
+export CC=$mpi/bin/mpicc
+export CXX=$mpi/bin/mpicxx
+export FC=$mpi/bin/mpif90
+export F90=$mpi/bin/mpif90
+
+export OMP_NUM_THREADS=1
+
+#export PETSC_DIR=/home/by/Programs/petsc/3.14.3
+
+export C_INCLUDE_PATH=$mpi/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$mpi/include:$CPLUS_INCLUDE_PATH
+export FPATH=$mpi/include:$FPATH
+export MANPATH=$mpi/share/man:$MANPATH
+export LD_LIBRARY_PATH=$mpi/lib:$mpi/lib64:$LD_LIBRARY_PATH 
