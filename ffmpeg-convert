@@ -1,0 +1,25 @@
+###################################################################################
+### there are several command lines for converting files,                       ###
+### i.e. jpg,png, avi or whatever your want, to mp4,flv or whatever your want . ###
+###################################################################################
+
+##############################
+### For avi to gif:
+##############################
+ffmpeg -i CHR.avi -t 11 -vf scale=180:-1 -r 10 -f image2pipe -vcodec ppm - | convert -delay 5 -loop 0 - output.gif
+
+##############################
+png to avi:
+##############################
+ffmpeg -f image2 -r 15 -i CH.%04d.png -vcodec flv -b 100000k CH.flv
+
+##############################
+jpg to mp4:
+##############################
+ffmpeg -f image2 -r 8 -i Combine1-%04d.jpeg -vcodec libx264 -crf 15  -pix_fmt yuv420p -acodec copy -threads 12 Micro1Mech0.2.mp4
+
+###################################
+### if you have the size errors
+### please use this one
+###################################
+ffmpeg -f image2 -r 10 -i Combine1-%04d.jpeg -vcodec libx264 -vf pad="width=ceil(iw/2)*2:height=ceil(ih/2)*2" -crf 15 -pix_fmt yuv420p test.mp4
