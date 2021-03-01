@@ -1,0 +1,19 @@
+cmake_minimum_required (VERSION 3.8)
+project (test)
+enable_language (Fortran)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
+# gfortran
+set (CMAKE_Fortran_FLAGS "-O2 -Wall -Wextra -Werror -fopenmp -std=f2018")
+
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}")
+
+SET(CMAKE_Fortran_MODULE_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
+
+###############################
+### for source code
+###############################
+set(src main.f90)
+set(src ${src} myfun.f90)
+
+add_executable(test ${src})
