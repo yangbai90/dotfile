@@ -1,0 +1,11 @@
+{
+  "source_dirs": ["/home/by/Projects/Fortran/Ex1"],
+  "excl_paths": [""],
+  "excl_suffixes": ["_skip.f90"],
+  "pp_suffixes": [".f03", ".F90",".f08"],
+  "pp_defs": {"HAVE_PACKAGE": ""},
+  "include_dirs": ["./", "/home/by/Projects/Fortran/Ex1"],
+  "ext_source_dirs": [""],
+  "lowercase_intrinsics": false,
+  "debug_log": false
+}
