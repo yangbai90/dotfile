@@ -53,9 +53,13 @@ Plugin 'rudrab/vimf90'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-
 " (Optional) Multi-entry selection UI.
 Plugin 'junegunn/fzf'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" For line indent
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'yggdroot/indentline'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()            " required
