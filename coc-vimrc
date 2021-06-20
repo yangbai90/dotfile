@@ -53,7 +53,7 @@ Plugin 'rudrab/vimf90'
 Plugin 'JuliaEditorSupport/julia-vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" For julia
+""" For icon
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'ryanoasis/vim-devicons'
 
@@ -63,10 +63,14 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" For Language server
+""" For command line finder
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-bash' }
 Plugin 'junegunn/fzf.vim'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" For Line indent
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'yggdroot/indentline'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()            " required
@@ -143,7 +147,7 @@ autocmd Filetype fortran setlocal formatprg=fprettify\ --silent
 set rtp+=~/.fzf
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" settings for language server
+""" settings for coc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set encoding=utf-8
 " TextEdit might fail if hidden is not set.
