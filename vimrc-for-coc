@@ -51,7 +51,7 @@ Plugin 'rudrab/vimf90'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ For CoC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 " (Optional) Multi-entry selection UI.
 Plugin 'junegunn/fzf'
