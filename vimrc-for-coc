@@ -53,6 +53,8 @@ Plugin 'rudrab/vimf90'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
+"Plugin 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'}
+
 " (Optional) Multi-entry selection UI.
 Plugin 'junegunn/fzf'
 
@@ -60,6 +62,14 @@ Plugin 'junegunn/fzf'
 """ For line indent
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'yggdroot/indentline'
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" For multiple line edit
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()            " required
@@ -102,6 +112,15 @@ set smartcase
 """""" for vimf90
 let fortran_leader = "your chosen key"
 let fortran_linter=2
+
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" for multiple line edit
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:VM_maps = {}
+let g:VM_maps['Find Under']         = '<C-d>'           " replace C-n
+let g:VM_maps['Find Subword Under'] = '<C-d>'           " replace visual C-n
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ settings for NERDTree
@@ -309,4 +328,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
