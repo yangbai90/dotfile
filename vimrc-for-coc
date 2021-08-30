@@ -68,7 +68,7 @@ Plugin 'yggdroot/indentline'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ For multiple line edit
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plugin 'mg979/vim-visual-multi', {'branch': 'master'}
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
