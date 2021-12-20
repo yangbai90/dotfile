@@ -1,0 +1,1 @@
+gource -f -1920x1080 -o - --seconds-per-day 0.5 --font-size 24 --file-font-size 20 --dir-font-size 20 --user-font-size 20 --multi-sampling --follow-user yangbai90 | ffmpeg -y -r 60 -f image2pipe -vcodec ppm -i - -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -crf 1 -threads 0 -bf 0 gource.mp4
