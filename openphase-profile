@@ -1,0 +1,37 @@
+export toolkit=/home/by/Programs/toolkits/gcc11
+
+export FFTW=$toolkit/fftw/3.3.10
+
+export MPI_DIR=$toolkit/openmpi/4.1.3
+
+export PATH=$PATH:$MPI_DIR/bin
+
+export LD_LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/include:$LD_LIBRARY_PATH
+
+export CC=mpicc
+export CXX=mpicxx
+export FC=mpif90
+export F90=mpif90
+
+export OMP_NUM_THREADS=16
+
+alias mycmake='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
+
+export PETSC_DIR=/home/by/Programs/toolkits/gcc11/petsc/3.16.6
+
+#export OPENPHASE=/home/by/Downloads/OpenPhase.V0.9.3/
+
+export C_INCLUDE_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/include:$MPI_DIR/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/include:$MPI_DIR/include:$CPLUS_INCLUDE_PATH
+export FPATH=$MPI_DIR/include:$FPATH
+export MANPATH=$MPI_DIR/share/man:$MANPATH
+export LD_LIBRARY_PATH=$MPI_DIR/lib:$LD_LIBRARY_PATH
+
+###################################
+### for FFTW
+###################################
+export C_INCLUDE_PATH=$FFTW/include:$C_INCLUDE_PATH
+export CPLUS_INCLUDE_PATH=$FFTW/include:$CPLUS_INCLUDE_PATH
+export FPATH=$FFTW/include:$FPATH
+export MANPATH=$FFTW/share/man:$MANPATH
+export LD_LIBRARY_PATH=$FFTW/lib:$LD_LIBRARY_PATH
